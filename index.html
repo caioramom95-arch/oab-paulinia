@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OAB Paulínia — 233ª Subseção da Ordem dos Advogados do Brasil</title>
+<meta name="description" content="OAB – 233ª Subseção de Paulínia. Representação institucional, defesa das prerrogativas e fortalecimento da advocacia local.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    --navy:#152833;
+    --navy-2:#0e1b22;
+    --white:#ffffff;
+    --bg-soft:#f4f5f6;
+    --text:#1c2b33;
+    --text-secondary:#5c6670;
+    --text-muted:#64707a;
+    --line:rgba(21,40,51,0.12);
+    --line-soft:rgba(21,40,51,0.08);
+    --line-strong:rgba(21,40,51,0.24);
+    --line-onnavy:rgba(255,255,255,0.16);
+    --shadow-sm:0 1px 3px rgba(21,40,51,0.07);
+    --shadow-md:0 14px 40px rgba(14,27,34,0.10);
+    --font-serif:'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-sans:'Inter', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:var(--font-sans);color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}
+  a:hover{color:inherit;}
+  button{font-family:inherit;cursor:pointer;}
+  img,svg{display:block;}
+  h1,h2,h3{font-family:var(--font-serif);font-weight:600;margin:0;color:var(--navy);letter-spacing:0.002em;}
+  p{margin:0;}
+  .container{max-width:1180px;margin:0 auto;padding:0 40px;}
+  .eyebrow{display:flex;align-items:center;gap:12px;font-family:var(--font-sans);font-size:12.5px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:18px;}
+  .eyebrow-mark{width:28px;height:2px;background:var(--navy);flex:none;}
+  .divider-emblem{display:flex;align-items:center;gap:14px;margin:0 0 28px;}
+  .divider-emblem .bar-long{width:44px;height:1px;background:var(--line-strong);}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;border:1px solid transparent;transition:background .25s ease, color .25s ease, border-color .25s ease, transform .25s ease;white-space:nowrap;}
+  .btn:active{transform:translateY(1px);}
+  .btn-primary{background:var(--navy);color:var(--white);border-color:var(--navy);}
+  .btn-primary:hover{background:var(--navy-2);border-color:var(--navy-2);color:var(--white);}
+  .btn-outline{background:transparent;color:var(--white);border-color:rgba(255,255,255,0.55);}
+  .btn-outline:hover{background:rgba(255,255,255,0.10);border-color:#fff;color:var(--white);}
+  .btn-outline-dark{background:transparent;color:var(--navy);border-color:var(--line-strong);}
+  .btn-outline-dark:hover{background:var(--navy);border-color:var(--navy);color:var(--white);}
+  .btn-light{background:var(--white);color:var(--navy);border-color:var(--white);}
+  .btn-light:hover{background:transparent;color:var(--white);border-color:rgba(255,255,255,0.7);}
+
+  /* reveal-on-scroll */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.22,.61,.36,1), transform .8s cubic-bezier(.22,.61,.36,1);}
+  .reveal.is-visible{opacity:1;transform:translateY(0);}
+  .reveal-d1.is-visible{transition-delay:.08s;}
+  .reveal-d2.is-visible{transition-delay:.16s;}
+  .reveal-d3.is-visible{transition-delay:.24s;}
+  .reveal-d4.is-visible{transition-delay:.32s;}
+
+  /* ===== HEADER ===== */
+  .site-header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line-soft);transition:padding .3s ease, box-shadow .3s ease;}
+  .site-header .container{display:flex;align-items:center;justify-content:space-between;padding-top:22px;padding-bottom:22px;transition:padding .3s ease;}
+  .site-header.is-scrolled{box-shadow:var(--shadow-sm);}
+  .site-header.is-scrolled .container{padding-top:14px;padding-bottom:14px;}
+  .brand{display:flex;align-items:center;gap:12px;color:var(--navy);}
+  .brand-mark{width:40px;height:40px;flex:none;overflow:hidden;}
+  .brand-mark img{width:100%;height:100%;object-fit:cover;display:block;}
+  .brand-text{display:flex;flex-direction:column;line-height:1.15;}
+  .brand-text .brand-oab{font-family:var(--font-serif);font-weight:700;font-size:16px;letter-spacing:0.04em;}
+  .brand-text .brand-sub{font-family:var(--font-sans);font-size:9.5px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--text-muted);margin-top:2px;}
+  .nav-links{display:flex;align-items:center;gap:38px;list-style:none;margin:0;padding:0;}
+  .nav-links a{font-size:13.5px;font-weight:500;color:var(--text);letter-spacing:0.01em;position:relative;padding:4px 0;}
+  .nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--navy);transform:scaleX(0);transform-origin:left;transition:transform .3s ease;}
+  .nav-links a:hover::after{transform:scaleX(1);}
+  .header-right{display:flex;align-items:center;gap:30px;}
+  .hamburger{display:none;background:none;border:none;padding:6px;color:var(--navy);}
+  .hamburger .icon-close{display:none;}
+  .hamburger.is-open .icon-open{display:none;}
+  .hamburger.is-open .icon-close{display:block;}
+  .mobile-nav{position:fixed;top:0;right:0;bottom:0;width:min(84vw,360px);background:var(--white);box-shadow:-16px 0 50px rgba(14,27,34,0.18);transform:translateX(100%);transition:transform .35s cubic-bezier(.22,.61,.36,1);z-index:200;display:flex;flex-direction:column;padding:28px 30px;gap:26px;}
+  .mobile-nav.is-open{transform:translateX(0);}
+  .mobile-nav-top{display:flex;align-items:center;justify-content:space-between;}
+  .mobile-nav-close{background:none;border:none;color:var(--navy);padding:6px;}
+  .mobile-nav-links{display:flex;flex-direction:column;gap:6px;list-style:none;margin:0;padding:0;}
+  .mobile-nav-links a{display:block;padding:14px 4px;font-size:16px;font-weight:500;color:var(--navy);border-bottom:1px solid var(--line-soft);}
+  .mobile-nav-cta{margin-top:auto;}
+  .nav-backdrop{position:fixed;inset:0;background:rgba(14,27,34,0.45);opacity:0;pointer-events:none;transition:opacity .3s ease;z-index:150;}
+  .nav-backdrop.is-open{opacity:1;pointer-events:auto;}
+
+  /* ===== HERO ===== */
+  .hero{position:relative;min-height:92vh;background:var(--navy);display:flex;align-items:center;overflow:hidden;padding-top:140px;padding-bottom:96px;}
+  .hero-bg{position:absolute;inset:0;overflow:hidden;}
+  .hero-bg svg{position:absolute;top:0;left:0;width:100%;height:100%;}
+  .hero-glow{position:absolute;top:-20%;right:-10%;width:60%;height:70%;background:radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 70%);}
+  .hero-content{position:relative;z-index:2;max-width:760px;}
+  .hero-tag{display:inline-flex;align-items:center;gap:10px;padding:9px 18px;border:1px solid rgba(255,255,255,0.28);color:rgba(255,255,255,0.86);font-size:11.5px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:34px;}
+  .hero-kicker{font-family:var(--font-sans);color:rgba(255,255,255,0.7);font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:22px;}
+  .hero h1{color:var(--white);font-size:44px;line-height:1.2;margin-bottom:26px;}
+  .hero h1 em{font-style:normal;color:rgba(255,255,255,0.72);}
+  .hero p.lead{font-family:var(--font-sans);color:rgba(255,255,255,0.78);font-size:16.5px;line-height:1.75;max-width:600px;margin-bottom:44px;}
+  .hero-actions{display:flex;gap:18px;flex-wrap:wrap;}
+
+  /* ===== SECTION shared ===== */
+  .section{padding:120px 0;}
+  .section-soft{background:var(--bg-soft);}
+  .section-title{font-size:34px;line-height:1.25;margin-bottom:22px;max-width:560px;}
+  .section-lead{font-family:var(--font-sans);color:var(--text-secondary);font-size:16px;line-height:1.8;max-width:560px;}
+
+  /* ===== INSTITUTIONAL ===== */
+  .institutional-grid{display:grid;grid-template-columns:1fr 0.86fr;gap:96px;align-items:center;}
+  .institutional-copy p{font-family:var(--font-sans);color:var(--text-secondary);font-size:16px;line-height:1.85;margin-bottom:22px;}
+  .institutional-visual{position:relative;aspect-ratio:4/5;background:var(--navy);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+  .institutional-visual svg{position:relative;z-index:1;}
+  .institutional-visual .frame-line{position:absolute;inset:18px;border:1px solid rgba(255,255,255,0.18);z-index:1;}
+
+  /* ===== NUMBERS ===== */
+  .numbers{border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);}
+  .numbers-grid{display:grid;grid-template-columns:repeat(3,1fr);}
+  .number-item{padding:64px 40px;text-align:center;border-left:1px solid var(--line-soft);}
+  .number-item:first-child{border-left:none;}
+  .number-value{font-family:var(--font-serif);font-size:46px;font-weight:600;color:var(--navy);margin-bottom:10px;}
+  .number-label{font-family:var(--font-sans);font-size:13px;color:var(--text-secondary);letter-spacing:0.03em;}
+
+  /* ===== CARD GRIDS (services / committees / news) ===== */
+  .card-grid{display:grid;gap:1px;background:var(--line-soft);border:1px solid var(--line-soft);margin-top:64px;}
+  .services .card-grid{grid-template-columns:repeat(3,1fr);}
+  .committees .card-grid{grid-template-columns:repeat(2,1fr);}
+  .news .card-grid{grid-template-columns:repeat(3,1fr);}
+  .card{background:var(--white);padding:44px 38px;display:flex;flex-direction:column;gap:18px;transition:background .3s ease;}
+  .card:hover{background:var(--bg-soft);}
+  .card-icon{width:44px;height:44px;border:1px solid var(--line-strong);display:flex;align-items:center;justify-content:center;color:var(--navy);}
+  .card h3{font-size:19px;line-height:1.35;}
+  .card p{font-family:var(--font-sans);color:var(--text-secondary);font-size:14.5px;line-height:1.7;}
+  .card-note{font-family:var(--font-sans);font-size:11px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:var(--text-muted);margin-top:auto;padding-top:8px;}
+  .section-note{font-family:var(--font-sans);color:var(--text-muted);font-size:13.5px;margin-top:28px;font-style:italic;}
+
+  .committee-card .card-tag{font-family:var(--font-sans);font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);}
+  .committee-card h3{color:var(--text-muted);font-style:italic;font-weight:600;}
+  .committee-card .field-row{display:flex;justify-content:space-between;font-family:var(--font-sans);font-size:13px;color:var(--text-muted);border-top:1px dashed var(--line-strong);padding-top:14px;margin-top:4px;}
+
+  .news-card .card-tag{display:inline-block;align-self:flex-start;font-family:var(--font-sans);font-size:10.5px;font-weight:700;letter-spacing:0.11em;text-transform:uppercase;color:var(--navy);border:1px solid var(--line-strong);padding:5px 10px;}
+  .news-card .news-date{font-family:var(--font-sans);font-size:12.5px;color:var(--text-muted);}
+  .news-card .placeholder-flag{font-family:var(--font-sans);font-size:10.5px;color:var(--text-muted);letter-spacing:0.04em;}
+
+  /* ===== CTA BANNER ===== */
+  .cta-banner{background:var(--navy);padding:120px 0;text-align:center;position:relative;overflow:hidden;}
+  .cta-banner .container{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;}
+  .cta-banner h2{color:var(--white);font-size:36px;max-width:640px;margin:0 auto 20px;}
+  .cta-banner p{font-family:var(--font-sans);color:rgba(255,255,255,0.72);font-size:16px;max-width:520px;margin:0 auto 42px;line-height:1.75;}
+  .cta-lines{position:absolute;inset:0;opacity:0.5;}
+
+  /* ===== CONTACT ===== */
+  .contact-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:96px;}
+  .contact-block{display:flex;gap:18px;padding:26px 0;border-bottom:1px solid var(--line-soft);}
+  .contact-block:first-of-type{padding-top:0;}
+  .contact-icon{width:38px;height:38px;flex:none;border:1px solid var(--line-strong);display:flex;align-items:center;justify-content:center;color:var(--navy);}
+  .contact-block h3{font-family:var(--font-sans);font-size:13px;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;}
+  .contact-block p{font-family:var(--font-sans);font-size:16px;color:var(--text);line-height:1.6;}
+  .contact-actions{display:flex;gap:16px;margin-top:36px;flex-wrap:wrap;}
+  .contact-visual{background:var(--bg-soft);border:1px solid var(--line-soft);padding:56px 44px;display:flex;flex-direction:column;justify-content:center;}
+  .contact-visual .quote-mark{font-family:var(--font-serif);font-size:64px;line-height:1;color:var(--line-strong);margin-bottom:18px;}
+  .contact-visual h3{font-size:24px;line-height:1.4;margin-bottom:16px;}
+  .contact-visual p{font-family:var(--font-sans);color:var(--text-secondary);font-size:15px;line-height:1.8;}
+
+  /* ===== MAP ===== */
+  .map-section{border-top:1px solid var(--line-soft);}
+  .map-grid{display:grid;grid-template-columns:1.15fr 0.85fr;}
+  .map-visual{position:relative;background:var(--bg-soft);min-height:460px;overflow:hidden;}
+  .map-visual svg{position:absolute;inset:0;width:100%;height:100%;}
+  .map-pin{position:absolute;top:50%;left:50%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;color:var(--navy);}
+  .map-info{background:var(--navy);color:var(--white);padding:72px 64px;display:flex;flex-direction:column;justify-content:center;}
+  .map-info h3{color:var(--white);font-size:28px;margin-bottom:20px;}
+  .map-info p{font-family:var(--font-sans);color:rgba(255,255,255,0.75);font-size:15.5px;line-height:1.85;margin-bottom:36px;}
+
+  /* ===== FOOTER ===== */
+  .site-footer{background:var(--navy-2);color:rgba(255,255,255,0.72);padding:88px 0 0;}
+  .footer-grid{display:grid;grid-template-columns:1.3fr 0.8fr 1fr;gap:64px;padding-bottom:64px;border-bottom:1px solid var(--line-onnavy);}
+  .footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:22px;color:var(--white);}
+  .footer-brand .brand-mark{box-shadow:0 0 0 1px rgba(255,255,255,0.28);}
+  .footer-desc{font-family:var(--font-sans);font-size:14px;line-height:1.8;color:rgba(255,255,255,0.55);max-width:280px;}
+  .footer-col h4{font-family:var(--font-sans);font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:22px;}
+  .footer-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;}
+  .footer-col a{font-family:var(--font-sans);font-size:14.5px;color:rgba(255,255,255,0.78);}
+  .footer-col a:hover{color:var(--white);}
+  .footer-contact{font-family:var(--font-sans);font-size:14.5px;line-height:1.9;color:rgba(255,255,255,0.78);}
+  .footer-bottom{padding:28px 0 34px;text-align:center;font-family:var(--font-sans);font-size:12.5px;color:rgba(255,255,255,0.42);}
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 980px){
+    .nav-links, .header-right .btn-primary{display:none;}
+    .hamburger{display:flex;}
+    .institutional-grid, .contact-grid, .map-grid{grid-template-columns:1fr;gap:56px;}
+    .institutional-visual{order:-1;aspect-ratio:16/9;}
+    .services .card-grid, .news .card-grid{grid-template-columns:1fr 1fr;}
+    .committees .card-grid{grid-template-columns:1fr;}
+    .numbers-grid{grid-template-columns:1fr;}
+    .number-item{border-left:none;border-top:1px solid var(--line-soft);}
+    .number-item:first-child{border-top:none;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+    .footer-brand-col{grid-column:1 / -1;}
+  }
+  @media (max-width: 640px){
+    .container{padding:0 24px;}
+    .hero{padding-top:120px;padding-bottom:72px;min-height:auto;}
+    .hero h1{font-size:32px;}
+    .hero p.lead{font-size:15px;}
+    .section{padding:80px 0;}
+    .section-title{font-size:27px;}
+    .services .card-grid, .news .card-grid, .committees .card-grid{grid-template-columns:1fr;}
+    .cta-banner{padding:80px 0;}
+    .cta-banner h2{font-size:27px;}
+    .contact-visual, .map-info{padding:40px 28px;}
+    .footer-grid{grid-template-columns:1fr;gap:40px;}
+    .hero-actions .btn, .contact-actions .btn{width:100%;justify-content:center;}
+    .hero-actions, .contact-actions{width:100%;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <a href="#inicio" class="brand" aria-label="OAB Paulínia — início">
+      <span class="brand-mark">
+        <img src="oab-logo.jpg" alt="OAB Paulínia">
+      </span>
+      <span class="brand-text">
+        <span class="brand-oab">OAB PAULÍNIA</span>
+        <span class="brand-sub">233ª Subseção</span>
+      </span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#subsecao">A Subseção</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#noticias">Notícias</a></li>
+      <li><a href="#comissoes">Comissões</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+
+    <div class="header-right">
+      <a href="#contato" class="btn btn-primary">Fale com a OAB</a>
+      <button class="hamburger" id="menuToggleBtn" aria-label="Abrir menu">
+        <svg class="icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h18"/></svg>
+        <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-backdrop" id="navBackdrop"></div>
+
+<nav class="mobile-nav" id="mobileNav" aria-label="Menu móvel">
+  <div class="mobile-nav-top">
+    <span class="brand-text" style="color:#152833;">
+      <span class="brand-oab" style="font-size:15px;">OAB PAULÍNIA</span>
+    </span>
+    <button class="mobile-nav-close" id="menuCloseBtn" aria-label="Fechar menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <ul class="mobile-nav-links">
+    <li><a href="#inicio">Início</a></li>
+    <li><a href="#subsecao">A Subseção</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#noticias">Notícias</a></li>
+    <li><a href="#comissoes">Comissões</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <div class="mobile-nav-cta">
+    <a href="#contato" class="btn btn-primary" style="width:100%;justify-content:center;">Fale com a OAB</a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="inicio">
+  <div class="hero-bg" aria-hidden="true">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1440" height="900" fill="#152833"/>
+      <g stroke="#ffffff" stroke-opacity="0.055" stroke-width="1">
+        <line x1="120" y1="0" x2="120" y2="900"/>
+        <line x1="280" y1="0" x2="280" y2="900"/>
+        <line x1="440" y1="0" x2="440" y2="900"/>
+        <line x1="600" y1="0" x2="600" y2="900"/>
+        <line x1="760" y1="0" x2="760" y2="900"/>
+        <line x1="920" y1="0" x2="920" y2="900"/>
+        <line x1="1080" y1="0" x2="1080" y2="900"/>
+        <line x1="1240" y1="0" x2="1240" y2="900"/>
+        <line x1="1400" y1="0" x2="1400" y2="900"/>
+      </g>
+      <g stroke="#ffffff" stroke-opacity="0.09" stroke-width="1.2" fill="none">
+        <path d="M980 780 L980 260"/>
+        <path d="M1120 780 L1120 300"/>
+        <path d="M1260 780 L1260 340"/>
+        <path d="M840 780 L840 220"/>
+        <circle cx="1090" cy="150" r="120"/>
+        <path d="M900 260 L1280 260" stroke-opacity="0.13"/>
+        <path d="M780 780 L1360 780" stroke-opacity="0.13"/>
+      </g>
+      <g transform="translate(1090,150)" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M0 -46 L0 40"/>
+        <path d="M-38 -22 L38 -22"/>
+        <path d="M-38 -22 L-58 18 a24 20 0 0 0 40 0 z"/>
+        <path d="M38 -22 L18 18 a24 20 0 0 0 40 0 z"/>
+        <path d="M-22 40 L22 40"/>
+        <circle cx="0" cy="-46" r="4" fill="#ffffff" fill-opacity="0.5" stroke="none"/>
+      </g>
+    </svg>
+  </div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="container hero-content">
+    <div class="hero-tag reveal">Paulínia • São Paulo</div>
+    <div class="hero-kicker reveal reveal-d1">OAB — 233ª Subseção de Paulínia</div>
+    <h1 class="reveal reveal-d2">Representando a advocacia.<br><em>Fortalecendo a Justiça.</em></h1>
+    <p class="lead reveal reveal-d3">A Ordem dos Advogados do Brasil – 233ª Subseção de Paulínia atua na representação, defesa e valorização da advocacia, promovendo orientação, integração e fortalecimento da classe.</p>
+    <div class="hero-actions reveal reveal-d4">
+      <a href="#subsecao" class="btn btn-light">Conheça a Subseção</a>
+      <a href="#contato" class="btn btn-outline">Fale com a OAB</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== A SUBSEÇÃO ===== -->
+<section class="section" id="subsecao">
+  <div class="container institutional-grid">
+    <div class="institutional-copy reveal">
+      <div class="eyebrow"><span class="eyebrow-mark"></span>Institucional</div>
+      <h2 class="section-title" style="margin-bottom:28px;">A Subseção</h2>
+      <p>A OAB – 233ª Subseção de Paulínia é parte da estrutura da Ordem dos Advogados do Brasil e atua junto à advocacia local, promovendo representação institucional, defesa das prerrogativas profissionais e fortalecimento da classe.</p>
+      <p>Nosso compromisso é contribuir para uma advocacia cada vez mais fortalecida, ética e participativa, aproximando a instituição dos profissionais e da sociedade.</p>
+      <div class="divider-emblem" style="margin-top:36px;">
+        <span class="bar-long"></span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#152833" stroke-width="1.4"><path d="M12 3v17"/><path d="M4 7h16"/><path d="M4 7l-3 6a4 4 0 0 0 7 0z"/><path d="M20 7l-3 6a4 4 0 0 0 7 0z"/></svg>
+      </div>
+    </div>
+    <div class="institutional-visual reveal reveal-d2">
+      <div class="frame-line"></div>
+      <svg width="72%" viewBox="0 0 200 200" fill="none" stroke="#ffffff" stroke-opacity="0.85" stroke-width="1">
+        <rect x="10" y="150" width="180" height="6" fill="#ffffff" fill-opacity="0.9" stroke="none"/>
+        <rect x="26" y="60" width="14" height="90" fill="#ffffff" fill-opacity="0.16" stroke="none"/>
+        <rect x="60" y="60" width="14" height="90" fill="#ffffff" fill-opacity="0.16" stroke="none"/>
+        <rect x="94" y="60" width="14" height="90" fill="#ffffff" fill-opacity="0.16" stroke="none"/>
+        <rect x="128" y="60" width="14" height="90" fill="#ffffff" fill-opacity="0.16" stroke="none"/>
+        <rect x="162" y="60" width="14" height="90" fill="#ffffff" fill-opacity="0.16" stroke="none"/>
+        <path d="M6 60 L100 14 L194 60 Z" fill="none" stroke-opacity="0.5"/>
+        <line x1="0" y1="60" x2="200" y2="60" stroke-opacity="0.5"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NÚMEROS ===== -->
+<section class="numbers">
+  <div class="container" style="padding:0;">
+    <div class="numbers-grid">
+      <div class="number-item reveal">
+        <div class="number-value">233ª</div>
+        <div class="number-label">Subseção de Paulínia</div>
+      </div>
+      <div class="number-item reveal reveal-d1">
+        <div class="number-value">Paulínia</div>
+        <div class="number-label">São Paulo</div>
+      </div>
+      <div class="number-item reveal reveal-d2">
+        <div class="number-value">OAB</div>
+        <div class="number-label">Ordem dos Advogados do Brasil</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVIÇOS ===== -->
+<section class="section services section-soft" id="servicos">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="eyebrow-mark"></span>Serviços</div>
+    <h2 class="section-title reveal reveal-d1">Serviços e Atendimento</h2>
+    <p class="section-lead reveal reveal-d2">Informações institucionais organizadas para facilitar o acesso da advocacia e da comunidade à Subseção.</p>
+
+    <div class="card-grid reveal reveal-d3">
+      <div class="card">
+        <span class="card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 16 0v5a2 2 0 0 1-2 2h-1v-7h3"/><path d="M4 17v-5h3v7H6a2 2 0 0 1-2-2z"/></svg>
+        </span>
+        <h3>Atendimento</h3>
+        <p>Informações e orientações para o contato com a Subseção.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7z"/></svg>
+        </span>
+        <h3>Prerrogativas</h3>
+        <p>Espaço institucional relacionado à defesa das prerrogativas da advocacia.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="18" cy="9" r="2.4"/><path d="M15.8 20a5 5 0 0 1 6.2-4.3"/></svg>
+        </span>
+        <h3>Comissões</h3>
+        <p>Acompanhe a atuação e as iniciativas das comissões da Subseção.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="16" rx="0"/><path d="M3.5 9.5h17"/><path d="M8 3v4"/><path d="M16 3v4"/></svg>
+        </span>
+        <h3>Eventos</h3>
+        <p>Informações sobre eventos, encontros e atividades institucionais.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v5h5"/><path d="M8.5 13h7"/><path d="M8.5 16.5h7"/></svg>
+        </span>
+        <h3>Informações à Advocacia</h3>
+        <p>Conteúdos e comunicados de interesse da classe.</p>
+      </div>
+    </div>
+    <p class="section-note reveal">Alguns conteúdos e canais desta seção estão em fase de atualização e serão disponibilizados em breve.</p>
+  </div>
+</section>
+
+<!-- ===== NOTÍCIAS ===== -->
+<section class="section news" id="noticias">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="eyebrow-mark"></span>Comunicação</div>
+    <h2 class="section-title reveal reveal-d1">Notícias e Atualizações</h2>
+    <p class="section-lead reveal reveal-d2">Espaço reservado para as publicações da Subseção — notícias, eventos e comunicados serão atualizados neste local.</p>
+
+    <div class="card-grid reveal reveal-d3">
+      <div class="card news-card">
+        <span class="card-tag">Notícia</span>
+        <h3>Título da notícia (exemplo ilustrativo)</h3>
+        <span class="news-date">00 / 00 / 2026</span>
+        <p>Espaço reservado para o resumo da notícia. Este conteúdo será atualizado pela Subseção.</p>
+        <span class="placeholder-flag">Conteúdo ilustrativo — a substituir</span>
+      </div>
+      <div class="card news-card">
+        <span class="card-tag">Evento</span>
+        <h3>Título do evento (exemplo ilustrativo)</h3>
+        <span class="news-date">00 / 00 / 2026</span>
+        <p>Espaço reservado para o resumo do evento. Este conteúdo será atualizado pela Subseção.</p>
+        <span class="placeholder-flag">Conteúdo ilustrativo — a substituir</span>
+      </div>
+      <div class="card news-card">
+        <span class="card-tag">Comunicado</span>
+        <h3>Título do comunicado (exemplo ilustrativo)</h3>
+        <span class="news-date">00 / 00 / 2026</span>
+        <p>Espaço reservado para o resumo do comunicado. Este conteúdo será atualizado pela Subseção.</p>
+        <span class="placeholder-flag">Conteúdo ilustrativo — a substituir</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMISSÕES ===== -->
+<section class="section committees section-soft" id="comissoes">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="eyebrow-mark"></span>Participação</div>
+    <h2 class="section-title reveal reveal-d1">Comissões da Subseção</h2>
+    <p class="section-lead reveal reveal-d2">As Comissões da OAB desempenham importante papel na promoção do debate, participação e desenvolvimento da advocacia em diferentes áreas.</p>
+
+    <div class="card-grid reveal reveal-d3">
+      <div class="card committee-card">
+        <span class="card-tag">Comissão</span>
+        <h3>Nome da comissão — a inserir</h3>
+        <p>Descrição, presidência e frente de atuação serão publicadas em breve.</p>
+        <div class="field-row"><span>Presidência</span><span>a inserir</span></div>
+      </div>
+      <div class="card committee-card">
+        <span class="card-tag">Comissão</span>
+        <h3>Nome da comissão — a inserir</h3>
+        <p>Descrição, presidência e frente de atuação serão publicadas em breve.</p>
+        <div class="field-row"><span>Presidência</span><span>a inserir</span></div>
+      </div>
+      <div class="card committee-card">
+        <span class="card-tag">Comissão</span>
+        <h3>Nome da comissão — a inserir</h3>
+        <p>Descrição, presidência e frente de atuação serão publicadas em breve.</p>
+        <div class="field-row"><span>Presidência</span><span>a inserir</span></div>
+      </div>
+      <div class="card committee-card">
+        <span class="card-tag">Comissão</span>
+        <h3>Nome da comissão — a inserir</h3>
+        <p>Descrição, presidência e frente de atuação serão publicadas em breve.</p>
+        <div class="field-row"><span>Presidência</span><span>a inserir</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BANNER ===== -->
+<section class="cta-banner">
+  <svg class="cta-lines" viewBox="0 0 1440 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g stroke="#ffffff" stroke-opacity="0.05" stroke-width="1">
+      <line x1="0" y1="80" x2="1440" y2="80"/>
+      <line x1="0" y1="320" x2="1440" y2="320"/>
+      <line x1="240" y1="0" x2="240" y2="400"/>
+      <line x1="1200" y1="0" x2="1200" y2="400"/>
+    </g>
+  </svg>
+  <div class="container reveal">
+    <h2>A advocacia de Paulínia tem voz.</h2>
+    <p>Uma Subseção presente, participativa e comprometida com a valorização da advocacia e com o fortalecimento da instituição.</p>
+    <a href="#subsecao" class="btn btn-light">Conheça a OAB Paulínia</a>
+  </div>
+</section>
+
+<!-- ===== CONTATO ===== -->
+<section class="section" id="contato">
+  <div class="container contact-grid">
+    <div class="reveal">
+      <div class="eyebrow"><span class="eyebrow-mark"></span>Contato</div>
+      <h2 class="section-title" style="margin-bottom:36px;">Entre em contato com a OAB Paulínia</h2>
+
+      <div class="contact-block">
+        <span class="contact-icon">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s7-6.1 7-11.6A7 7 0 0 0 5 9.4C5 14.9 12 21 12 21z"/><circle cx="12" cy="9.4" r="2.4"/></svg>
+        </span>
+        <div>
+          <h3>Endereço</h3>
+          <p>OAB – 233ª Subseção de Paulínia<br>Av. Brasília, 268 – Santa Cecília, Paulínia – SP<br>CEP: 13140-344</p>
+        </div>
+      </div>
+
+      <div class="contact-block">
+        <span class="contact-icon">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 5c0-.6.4-1 1-1h3l2 5-2 1.3a12 12 0 0 0 5.7 5.7L14 14l5 2v3c0 .6-.4 1-1 1C10.5 20 4 13.5 4 5z"/></svg>
+        </span>
+        <div>
+          <h3>Telefone</h3>
+          <p>(19) 3874-3336</p>
+        </div>
+      </div>
+
+      <div class="contact-block">
+        <span class="contact-icon">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        </span>
+        <div>
+          <h3>Horário de funcionamento</h3>
+          <p>Atendimento até às 18h</p>
+        </div>
+      </div>
+
+      <div class="contact-actions">
+        <a href="tel:+551938743336" class="btn btn-primary">Ligar para a OAB</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Av.+Bras%C3%ADlia%2C+268+-+Santa+Cec%C3%ADlia%2C+Paul%C3%ADnia+-+SP%2C+13140-344" target="_blank" rel="noopener" class="btn btn-outline-dark">Como chegar</a>
+      </div>
+    </div>
+
+    <div class="contact-visual reveal reveal-d2">
+      <span class="quote-mark">"</span>
+      <h3>Representação, orientação e proximidade com a advocacia de Paulínia.</h3>
+      <p>A Subseção está à disposição dos advogados e advogadas inscritos e da comunidade para informações institucionais e encaminhamentos oficiais.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MAPA ===== -->
+<section class="map-section">
+  <div class="map-grid">
+    <div class="map-visual reveal" aria-hidden="true">
+      <svg viewBox="0 0 800 460" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <rect width="800" height="460" fill="#f4f5f6"/>
+        <g stroke="#152833" stroke-opacity="0.10" stroke-width="1">
+          <line x1="0" y1="90" x2="800" y2="90"/>
+          <line x1="0" y1="190" x2="800" y2="190"/>
+          <line x1="0" y1="290" x2="800" y2="290"/>
+          <line x1="0" y1="390" x2="800" y2="390"/>
+          <line x1="130" y1="0" x2="130" y2="460"/>
+          <line x1="300" y1="0" x2="300" y2="460"/>
+          <line x1="470" y1="0" x2="470" y2="460"/>
+          <line x1="640" y1="0" x2="640" y2="460"/>
+        </g>
+        <path d="M0 300 C 200 230, 380 270, 800 200" stroke="#152833" stroke-opacity="0.22" stroke-width="10" fill="none"/>
+        <path d="M420 0 C 380 150, 440 300, 400 460" stroke="#152833" stroke-opacity="0.16" stroke-width="7" fill="none"/>
+      </svg>
+      <div class="map-pin">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="#152833" stroke="#152833" stroke-width="1"><path d="M12 21s7-6.1 7-11.6A7 7 0 0 0 5 9.4C5 14.9 12 21 12 21z"/><circle cx="12" cy="9.4" r="2.6" fill="#ffffff" stroke="#152833"/></svg>
+      </div>
+    </div>
+    <div class="map-info reveal reveal-d1">
+      <div class="eyebrow" style="color:rgba(255,255,255,0.55);"><span class="eyebrow-mark" style="background:#fff;"></span>Localização</div>
+      <h3>Estamos em Paulínia</h3>
+      <p>Av. Brasília, 268 – Santa Cecília<br>Paulínia – SP<br>CEP: 13140-344</p>
+      <div>
+        <a href="https://www.google.com/maps/search/?api=1&query=Av.+Bras%C3%ADlia%2C+268+-+Santa+Cec%C3%ADlia%2C+Paul%C3%ADnia+-+SP%2C+13140-344" target="_blank" rel="noopener" class="btn btn-light">Traçar rota</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand-col">
+      <div class="footer-brand">
+        <span class="brand-mark">
+          <img src="oab-logo.jpg" alt="OAB Paulínia">
+        </span>
+        <span class="brand-text">
+          <span class="brand-oab" style="color:#fff;">OAB PAULÍNIA</span>
+          <span class="brand-sub" style="color:rgba(255,255,255,0.5);">233ª Subseção</span>
+        </span>
+      </div>
+      <p class="footer-desc">OAB – 233ª Subseção de Paulínia, parte da estrutura da Ordem dos Advogados do Brasil.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#subsecao">A Subseção</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#noticias">Notícias</a></li>
+        <li><a href="#comissoes">Comissões</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <p class="footer-contact">(19) 3874-3336<br>Av. Brasília, 268 – Santa Cecília<br>Paulínia – SP</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    © OAB – 233ª Subseção de Paulínia. Todos os direitos reservados.
+  </div>
+</footer>
+
+<script>
+(function () {
+  var header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', function () {
+    header.classList.toggle('is-scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  var menuToggleBtn = document.getElementById('menuToggleBtn');
+  var menuCloseBtn = document.getElementById('menuCloseBtn');
+  var mobileNav = document.getElementById('mobileNav');
+  var navBackdrop = document.getElementById('navBackdrop');
+
+  function openMenu() {
+    mobileNav.classList.add('is-open');
+    navBackdrop.classList.add('is-open');
+    menuToggleBtn.classList.add('is-open');
+  }
+  function closeMenu() {
+    mobileNav.classList.remove('is-open');
+    navBackdrop.classList.remove('is-open');
+    menuToggleBtn.classList.remove('is-open');
+  }
+  menuToggleBtn.addEventListener('click', function () {
+    if (mobileNav.classList.contains('is-open')) closeMenu(); else openMenu();
+  });
+  menuCloseBtn.addEventListener('click', closeMenu);
+  navBackdrop.addEventListener('click', closeMenu);
+  mobileNav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', closeMenu);
+  });
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) entry.target.classList.add('is-visible');
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
+})();
+</script>
+</body>
+</html>
